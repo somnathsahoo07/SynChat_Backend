@@ -13,5 +13,8 @@ router.post("/logout", logout);
 router.put("/update-profile", protectRoute, updateProfile);
 
 router.get("/check", protectRoute, checkAuth)
+router.get("/hello", (req, res) => {
+    res.json({ message: "Hello from SynChat Backend!" });
+});
 
 export default router;
